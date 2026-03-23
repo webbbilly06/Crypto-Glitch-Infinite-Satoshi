@@ -4,12 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Glitch: Infinite Satoshi</title>
     <style>
-        body { background-color: #121212; color: #00ff00; font-family: monospace; text-align: center; padding-top: 50px; }
-        .balance { font-size: 24px; border: 1px solid #00ff00; display: inline-block; padding: 10px; margin-bottom: 20px; }
-        #glitch-btn { font-size: 80px; cursor: pointer; }
-        button { background: #00ff00; color: black; border: none; padding: 15px; font-weight: bold; margin: 10px; border-radius: 5px; width: 80%; max-width: 300px; }
-        .ad-btn { background: #ff00ff; color: white; }
+        body { background-color: #121212; color: #00ff00; font-family: monospace; text-align: center; padding: 20px; }
+        .balance { font-size: 24px; border: 2px solid #00ff00; display: inline-block; padding: 15px; margin: 20px 0; }
+        #glitch-btn { font-size: 100px; cursor: pointer; margin: 20px 0; }
+        button { border: none; padding: 15px; font-weight: bold; margin: 10px 0; border-radius: 8px; width: 100%; max-width: 300px; font-size: 18px; cursor: pointer; }
+        .ad-btn { background: #ff00ff; color: white; box-shadow: 0 0 10px #ff00ff; }
         .withdraw-btn { background: #ffffff; color: black; }
+        footer { margin-top: 50px; font-size: 12px; color: #444; }
     </style>
 </head>
 <body>
@@ -20,23 +21,30 @@
     <p>TAP THE GLITCH TO STACK SATS</p>
 
     <button class="ad-btn" onclick="watchAd()">p    
-    <div style="margin-top: 50px; border-top: 1px solid #333; padding-top: 20px;">
+    <div style="margin-top: 40px; border-top: 1px solid #333; padding-top: 20px;">
         <h3>WHITELIST YOUR WALLET</h3>
-        <p>To withdraw real crypto, verify your ZBD account:</p>
+        <p>Verify your ZBD account to withdraw:</p>
         <a href="https://zbd.gg/Webbbilly06c44a667d">
             <button class="withdraw-btn">p        </a>
     </div>
+
+    <footer>
+        <p>Privacy Policy: No personal data is collected. Virtual currency for entertainment only.</p>
+    </footer>
 
     <script>
         let count = 0;
         function mine() {
             count += 125;
-            document.getElementById('count').innerText = count;
+            document.getElementById('count').innerText = count.toLocaleString();
         }
         function watchAd() {
-            alert("Loading Video Ad... Reward: +500 Sats");
-            count += 500;
-            document.getElementById('count').innerText = count;
+            alert("Ad Loading... Please wait.");
+            setTimeout(() => {
+                count += 500;
+                document.getElementById('count').innerText = count.toLocaleString();
+                alert("Reward: +500 Sats Added!");
+            }, 1000);
         }
     </script>
 </body>
