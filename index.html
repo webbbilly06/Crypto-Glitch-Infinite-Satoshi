@@ -1,67 +1,44 @@
-CTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Glitch: Infinite Satoshi</title>
     <style>
-        body { text-align: center; font-family: 'Courier New', monospace; background: #000; color: #0f0; padding: 20px; }
-        #glitch-btn { font-size: 80px; margin: 30px; cursor: pointer; text-shadow: 2px 2px #f0f; }
-        .balance { font-size: 24px; border: 1px solid #0f0; padding: 10px; display: inline-block; }
-        .reward-btn { display: block; margin: 20px auto; padding: 15px; background: #0f0; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; }
+        body { background-color: #121212; color: #00ff00; font-family: monospace; text-align: center; padding-top: 50px; }
+        .balance { font-size: 24px; border: 1px solid #00ff00; display: inline-block; padding: 10px; margin-bottom: 20px; }
+        #glitch-btn { font-size: 80px; cursor: pointer; }
+        button { background: #00ff00; color: black; border: none; padding: 15px; font-weight: bold; margin: 10px; border-radius: 5px; width: 80%; max-width: 300px; }
+        .ad-btn { background: #ff00ff; color: white; }
+        .withdraw-btn { background: #ffffff; color: black; }
     </style>
 </head>
 <body>
     <h1>SYSTEM GLITCH DETECTED</h1>
     <div class="balance">SATOSHIS: <span id="count">0</span></div>
-    <div id="glitch-btn" onclick="mine()">⚡</div>
+    
+    <div id="glitch-btn" onclick="mine()">b!</div>
     <p>TAP THE GLITCH TO STACK SATS</p>
 
+    <button class="ad-btn" onclick="watchAd()">p    
     <div style="margin-top: 50px; border-top: 1px solid #333; padding-top: 20px;">
         <h3>WHITELIST YOUR WALLET</h3>
-        <p>To withdraw real crypto, you must verify via the link below:</p>
-        <a href="YOUR_LINK_HERE" class="reward-btn">VERIFY & WITHDRAW NOW</a>
+        <p>To withdraw real crypto, verify your ZBD account:</p>
+        <a href="https://zbd.gg/Webbbilly06c44a667d">
+            <button class="withdraw-btn">p        </a>
     </div>
 
     <script>
         let count = 0;
         function mine() {
-            count += 125; // High number makes it feel like a glitch!
-            document.getElementById('count').innerText = count.toLocaleString();
+            count += 125;
+            document.getElementById('count').innerText = count;
         }
-    </script>
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Glitch: Infinite Satoshi</title>
-    <style>
-        body { text-align: center; font-family: 'Courier New', monospace; background: #000; color: #0f0; padding: 20px; }
-        #glitch-btn { font-size: 80px; margin: 30px; cursor: pointer; text-shadow: 2px 2px #f0f; }
-        .balance { font-size: 24px; border: 1px solid #0f0; padding: 10px; display: inline-block; }
-        .reward-btn { display: block; margin: 20px auto; padding: 15px; background: #0f0; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; }
-    </style>
-</head>
-<body>
-    <h1>SYSTEM GLITCH DETECTED</h1>
-    <div class="balance">SATOSHIS: <span id="count">0</span></div>
-    <div id="glitch-btn" onclick="mine()">⚡</div>
-    <p>TAP THE GLITCH TO STACK SATS</p>
-
-    <div style="margin-top: 50px; border-top: 1px solid #333; padding-top: 20px;">
-        <h3>WHITELIST YOUR WALLET</h3>
-        <p>To withdraw real crypto, you must verify via the link below:</p>
-        <a href="YOUR_LINK_HERE" class="reward-btn">VERIFY & WITHDRAW NOW</a>
-    </div>
-
-    <script>
-        let count = 0;
-        function mine() {
-            count += 125; // High number makes it feel like a glitch!
-            document.getElementById('count').innerText = count.toLocaleString();
+        function watchAd() {
+            alert("Loading Video Ad... Reward: +500 Sats");
+            count += 500;
+            document.getElementById('count').innerText = count;
         }
     </script>
 </body>
 </html>
-
 
