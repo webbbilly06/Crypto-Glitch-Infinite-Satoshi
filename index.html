@@ -4,53 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Glitch: Infinite Satoshi</title>
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8431648360014829" crossorigin="anonymous"></script>
-    
     <style>
-        body { background-color: #121212; color: #00ff00; font-family: monospace; text-align: center; padding: 20px; margin: 0; }
-        .balance { font-size: 24px; border: 2px solid #00ff00; display: inline-block; padding: 15px; margin: 20px 0; }
-        #glitch-btn { font-size: 100px; cursor: pointer; margin: 20px 0; }
-        button { border: none; padding: 15px; font-weight: bold; margin: 10px 0; border-radius: 8px; width: 100%; max-width: 300px; font-size: 18px; cursor: pointer; }
-        .ad-btn { background: #ff00ff; color: white; box-shadow: 0 0 10px #ff00ff; }
+        body {
+            background-color: #121212;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding-top: 50px;
+            margin: 0;
+        }
+        .balance {
+            font-size: 28px;
+            border: 2px solid #00ff00;
+            display: inline-block;
+            padding: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        #glitch-btn {
+            font-size: 100px;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.1s;
+        }
+        #glitch-btn:active { transform: scale(0.95); }
+
+        button {
+            background: #00ff00;
+            color: black;
+            border: none;
+            padding: 15px;
+            font-weight: bold;
+            margin: 10px;
+            border-radius: 5px;
+            width: 85%;
+            max-width: 320px;
+            font-size: 16px;
+        }
+        .ad-btn { background: #ff00ff; color: white; }
         .withdraw-btn { background: #ffffff; color: black; }
-        footer { margin-top: 50px; font-size: 12px; color: #444; }
+
+        h1 { font-size: 22px; letter-spacing: 2px; }
     </style>
 </head>
 <body>
     <h1>SYSTEM GLITCH DETECTED</h1>
     <div class="balance">SATOSHIS: <span id="count">0</span></div>
-    
+
     <div id="glitch-btn" onclick="mine()">b!</div>
     <p>TAP THE GLITCH TO STACK SATS</p>
 
-    <button class="ad-btn" onclick="watchAd()">p    
+    <button class="ad-btn" onclick="watchAd()">Watch Ad</button>
     <div style="margin-top: 40px; border-top: 1px solid #333; padding-top: 20px;">
         <h3>WHITELIST YOUR WALLET</h3>
-        <p>Verify your ZBD account to withdraw:</p>
-        <a href="https://zbd.gg/Webbbilly06c44a667d" target="_blank">
-            <button class="withdraw-btn">p        </a>
+        <p style="font-size: 12px; color: #888;">Connect ZBD</p>
+        <a href="https://zbd.gg/Webbbilly06c44a">
+            <button class="withdraw-btn">Withdraw</button>
+        </a>
     </div>
-
-    <footer>
-        <p>Privacy Policy: No personal data is collected. Virtual currency for entertainment only.</p>
-    </footer>
 
     <script>
         let count = 0;
         function mine() {
             count += 125;
-            document.getElementById('count').innerText = count.toLocaleString();
+            document.getElementById('count').innerText = count;
+            // Small glitch effect on background
+            if(count % 1000 === 0) {
+                document.body.style.backgroundColor = '#ff0000';
+                setTimeout(() => document.body.style.backgroundColor = '#121212', 100);
+            }
         }
         function watchAd() {
-            alert("Ad Loading... Please wait.");
+            alert("Loading Video Ad... Please wait");
             setTimeout(() => {
                 count += 500;
-                document.getElementById('count').innerText = count.toLocaleString();
-                alert("Reward: +500 Sats Added!");
-            }, 1000);
+                document.getElementById('count').innerText = count;
+                alert("Reward: +500 Sats added!");
+            }, 1500);
         }
     </script>
-</body>
+
+    <div id="frame" style="width: 100%; margin: auto; position: relative; z-index: 99998;">
+        <iframe data-aa='2431600' src='//acceptable.a-ads.com/2431600' scrolling='no' style='border:0px; padding:0; width:100%; height:50px; overflow:hidden; background-color: transparent;'></iframe>
+    </div>
+    </body>
 </html>
 
